@@ -10,6 +10,7 @@ from logger import *
 app = Flask(__name__)
 
 TEXT = os.getenv('HELLO_TEXT')
+PORT = os.getenv('PORT')
 
 @app.route('/')
 def hello_world():
@@ -32,4 +33,4 @@ if __name__ == "__main__":
 
     scheduler.start()
 
-    serve(app, host='0.0.0.0', port=8888, threads=2)
+    serve(app, host='0.0.0.0', port=8080, threads=2)

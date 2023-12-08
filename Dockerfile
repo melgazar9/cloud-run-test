@@ -14,6 +14,6 @@ RUN apt-get update && rm -rf /var/lib/{apt,dpkg,cache,log}/
 
 RUN pip install -U pip && pip install -r requirements.txt
 
-EXPOSE 8888
+EXPOSE 8080
 
 CMD ["python", "host.py"]

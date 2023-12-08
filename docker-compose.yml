@@ -14,7 +14,7 @@ services:
     environment:
       - DOCKER_DEFAULT_PLATFORM=linux/amd64
     ports:
-      - 8888:8888
+      - 8080:8080
     deploy:
       resources:
         limits:
