@@ -26,7 +26,7 @@ if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
     scheduler = BackgroundScheduler(job_defaults={'max_instances': 2})
-    cron = {"year": "*", "month": "*", "day": "*", "week": "*", "day_of_week": "*", "hour": "17", "minute": "0", "second": "0"}
+    cron = {"year": "*", "month": "*", "day": "*", "week": "*", "day_of_week": "*", "hour": "*", "minute": "*", "second": "0"}
 
     scheduler.add_job(hello_world, trigger='cron', **cron, jitter=30)
 
